@@ -12,14 +12,9 @@ except:
 	print('The file cannot be opened:',file_name)
 	exit()
 paragraph = text_file.read()
-counter = 0
-for line in paragraph:
-	line.rstrip()
-	counter += 1
-print(counter)
 new_paragraph = paragraph.replace(" ","")
 # Approximate word count
-word_count = len(re.findall('\\w+', paragraph))
+word_count = len(re.findall('\w+', paragraph))
 # Approximate sentence count
 sentence_count = len(re.split("(?<=[.!?]) +", paragraph))
 letter_count = len(new_paragraph)
