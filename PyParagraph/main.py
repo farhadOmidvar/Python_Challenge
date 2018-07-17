@@ -11,7 +11,7 @@ try:
 except:
 	print('The file cannot be opened:',file_name)
 	exit()
-paragraph = text_file.read()
+paragraph = text_file.read().replace('\n',' ')
 new_paragraph = paragraph.replace(" ","")
 # Approximate word count
 word_count = len(re.findall('\w+', paragraph))
